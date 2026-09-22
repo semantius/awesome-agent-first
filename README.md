@@ -15,6 +15,8 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [Customer Relationship Management (CRM)](#customer-relationship-management-crm)
 - [Data Platforms](#data-platforms)
 - [Communication Systems](#communication-systems)
+- [Secrets and Access Management](#secrets-and-access-management)
+- [Workflow Automation](#workflow-automation)
 - [Standards](#standards)
 - [Assessment and Reading](#assessment-and-reading)
 
@@ -26,12 +28,24 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Data Platforms
 
+- [Busabase](https://busabase.com) - Local-first workspace where bases, fields, views, records and docs are all reachable through an MCP server, a generated OpenAPI document and a CLI, with credentials that can be capped so an agent's material writes wait as reviewable change requests. ([Source Code](https://github.com/busabase/busabase)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Directus](https://directus.com) - Maps an existing SQL database to REST and GraphQL APIs that the admin interface itself consumes, publishes an OpenAPI document and GraphQL SDL generated from your own schema, and governs its MCP server with the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0`, `self-host`, `MCP`, `REST`, `UI`)
 - [Semantius](https://www.semantius.com) - Puts role-based permissions and business logic inside PostgreSQL using row-level security, then generates the interface from that same model, so adding a table gives people working screens with no frontend code. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `SQL`, `CLI`, `UI`)
 
 ## Communication Systems
 
 - [AgentMail](https://www.agentmail.to) - Provisions a durable email inbox per agent over a REST API, delivers inbound mail as structured JSON with search across threads, and serves the same mailbox over IMAP and SMTP. (`hosted`, `REST`, `MCP`, `IMAP`)
+- [AgenticMail](https://github.com/agenticmail/agenticmail) - Self-hosted email, SMS and voice platform giving each agent its own address, number and scoped key, with a bundled Stalwart mail server so the same mailbox opens in any IMAP client, and a web interface served by the same API the agents call. (`MIT`, `self-host`, `MCP`, `IMAP`, `UI`)
+- [Chimely](https://github.com/dodopayments/chimely) - Self-hostable in-app notification inbox in Rust and PostgreSQL whose committed OpenAPI covers environment creation, HMAC rotation and user management, so its operator dashboard is a client of the same API, alongside a drop-in inbox component for recipients. (`AGPL-3.0`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Novu](https://novu.co) - Notification infrastructure whose API defines workflows, layouts, translations and provider integrations rather than only triggering them, published as a live OpenAPI document, with a dashboard for operators and an inbox component for recipients. ([Source Code](https://github.com/novuhq/novu)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+
+## Secrets and Access Management
+
+- [Infisical](https://infisical.com) - Secrets, PKI, KMS and privileged access platform where machine identities are first-class and revocable independently of any person, and custom roles and permissions are creatable through a published OpenAPI document of over 1,500 paths. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+
+## Workflow Automation
+
+- [n8n](https://n8n.io) - Self-hostable workflow automation whose public API creates and updates workflows, credentials, projects, roles, users and data-table columns rather than a subset of them, generated from an OpenAPI specification. ([Source Code](https://github.com/n8n-io/n8n)) (`fair-code`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Standards
 
