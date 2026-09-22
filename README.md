@@ -13,6 +13,9 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 ## Contents
 
 - [Customer Relationship Management (CRM)](#customer-relationship-management-crm)
+- [Content Management](#content-management)
+- [Enterprise Resource Planning (ERP)](#enterprise-resource-planning-erp)
+- [Commerce](#commerce)
 - [Data Platforms](#data-platforms)
 - [Communication Systems](#communication-systems)
 - [Secrets and Access Management](#secrets-and-access-management)
@@ -25,6 +28,20 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [ANOSF CRM](https://github.com/anosf/crm) - Self-hosted CRM whose web interface, REST API, MCP server and CLI all call one service layer, so every caller shares a permission model, an audit trail and a reversible change history. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Comp AI CRM](https://github.com/trycompai/crm) - Self-hosted CRM that republishes every tRPC procedure as a documented REST endpoint through a generated OpenAPI document, sharing one set of validation, middleware and services with the web interface, with workspace API keys for programmatic callers. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native CRM with a REST API, role-scoped access, webhooks on record changes and a minimal responsive interface. Self-described as early beta. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
+
+## Content Management
+
+- [Contentful](https://www.contentful.com) - Content platform whose Content Management API defines content types, editor interfaces, locales and custom roles rather than only filling them, with a first-party MCP server covering the same surface and a web app that is a client of that API. (`hosted`, `REST`, `MCP`, `UI`)
+- [Storyblok](https://www.storyblok.com) - Content platform whose Management API defines components and their fields, served to agents by a first-party hosted MCP endpoint with OAuth sign-in and tokens scoped to the spaces and permissions a caller needs, alongside a visual editor for people. (`hosted`, `REST`, `MCP`, `UI`)
+- [Webiny](https://www.webiny.com) - Self-hosted headless CMS whose Manage GraphQL API creates, updates and deletes content models and their fields, so its admin area is a client of the same schema an agent calls, with API keys scoped to the same permissions. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
+
+## Enterprise Resource Planning (ERP)
+
+- [Odoo](https://www.odoo.com) - ERP whose external API creates models, fields and access rights through the same meta-models its own web client reads, documented by Odoo as altering models and fields on the fly, with `fields_get` returning every field's label, help text and type at runtime. ([Source Code](https://github.com/odoo/odoo)) (`LGPL-3.0`, `self-host`, `RPC`, `UI`)
+
+## Commerce
+
+- [Saleor](https://saleor.io) - Headless commerce platform whose GraphQL API creates product types, attributes, channels and permission groups rather than only reading them, with a dashboard built on that same schema and apps issued scoped tokens that are revocable independently of any person. ([Source Code](https://github.com/saleor/saleor)) (`BSD-3-Clause`, `self-host`, `GraphQL`, `MCP`, `UI`)
 
 ## Data Platforms
 

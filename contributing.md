@@ -59,7 +59,7 @@ Record the date, the agent and the model used. Results move as models improve, s
 - **Products whose agent support was added afterwards** and covers only part of the product.
 - **Agent-only systems** that leave people no path to their own data. Those go in [agent-only.md](agent-only.md).
 - **General-purpose databases and warehouses.** Administering a database over SQL and an API is ordinary rather than agent-first, and is equally true of Snowflake, Databricks, Redshift, ClickHouse and PostgreSQL itself. A data platform is listed only when it ships capability built for agents specifically: cheap isolated forks for an agent to work against, retrieval designed for filling agent context, or a first-party MCP server governed by the same permissions as everything else.
-- **Systems whose model is configured only through a UI.** If object types, fields, roles or permissions can be created only by clicking, the software fails clause 2 no matter how good the query API is. Defining the model in a code repository that a human deploys is not the same as an interface an agent can call.
+- **Systems whose model is configured only through a UI.** If object types, fields, roles or permissions can be created only by clicking, the software fails clause 2 no matter how good the query API is. A CLI is an interface an agent can call, so the test is not whether the definition lives in a file. It is whether the running software reconfigures itself when it is handed one. Software that reaches its new model through a command the vendor ships and the agent runs itself passes. Software whose model is part of its own source, so that changing it means rebuilding and redeploying the application, does not.
 
 ## Opening a pull request
 
