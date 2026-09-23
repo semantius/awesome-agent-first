@@ -67,6 +67,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Workflow Automation
 
+- [Activepieces](https://www.activepieces.com) - Workflow automation whose first-party MCP server creates flows, steps, tables, fields and records under OAuth with protected-resource metadata and semantic search over its action catalog, alongside a REST API and the builder people use for the same work. ([Source Code](https://github.com/activepieces/activepieces)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [n8n](https://n8n.io) - Self-hostable workflow automation whose public API creates and updates workflows, credentials, projects, roles, users and data-table columns rather than a subset of them, generated from an OpenAPI specification. ([Source Code](https://github.com/n8n-io/n8n)) (`fair-code`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Standards
