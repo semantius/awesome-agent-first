@@ -26,6 +26,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [Secrets and Access Management](#secrets-and-access-management)
 - [Workflow Automation](#workflow-automation)
 - [Monitoring and Incident Response](#monitoring-and-incident-response)
+- [Product Analytics](#product-analytics)
 - [Standards](#standards)
 - [Assessment and Reading](#assessment-and-reading)
 
@@ -99,6 +100,10 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 - [Keep](https://www.keephq.dev) - Alert and incident platform whose API creates roles, permissions, groups, users and scoped API keys as well as workflows, provider integrations and deduplication rules, with an OpenAPI document served by the running instance and expression-based search across alerts. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
+## Product Analytics
+
+- [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document of 2,243 operations downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
+
 ## Standards
 
 The discovery and identity surfaces that clauses 6 and 7 refer to: what software publishes about itself, so a caller needs no out-of-band instructions, and how an agent comes to hold its own credentials. Adoption across sixteen origins is measured in [discovery-survey.md](discovery-survey.md).
@@ -117,6 +122,7 @@ The discovery and identity surfaces that clauses 6 and 7 refer to: what software
 - [Agent Readiness Score](https://isitagentready.com) - Scores a public origin from 0 to 100 across discoverability, content, bot access control and agent capabilities. ([Announcement](https://blog.cloudflare.com/agent-readiness/))
 - [Agents First](https://agentsfirst.dev) - Design framework stating nine implementation principles and a level scale, with published scores for named sites.
 - [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) - Argues that loading tool definitions and passing intermediate results through the model imposes a context ceiling, and that calling tools as code avoids it.
+- [The Golden Rules of Agent-First Product Engineering](https://posthog.com/newsletter/agent-first-product-engineering) - Five rules drawn from rebuilding PostHog's agent interface twice, arguing that agents should reach everything a person can and that a product should be exposed at the level agents reason about rather than one endpoint per screen.
 - [Resend auth.md](https://resend.com/auth.md) - A credential-acquisition document addressed to agents in the second person, stating plainly which flows are and are not supported.
 
 ## Related Lists
