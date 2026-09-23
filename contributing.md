@@ -27,21 +27,37 @@ And at least one of these.
 
 ## Verifying clauses 2 and 3
 
-Clauses 2 and 3 are settled by running the software, not by reading what it says about itself. The test is a round trip an agent completes with no person writing integration code.
+Clauses 2 and 3 are settled from what the software publishes about itself: its reference documentation, its generated schema, and the metadata it serves at runtime. That is the same material an agent has, and an agent reduced to discovering capability by trial and error has already been failed by clause 3, which asks that a caller need no out-of-band instructions. So an assessment reads what a caller would read, and an entry cites it.
 
-**Configure.** Starting from a fresh instance, the agent changes the model itself: create an entity or collection, add fields of more than one type, create a role, and grant that role a permission narrower than full access.
+A finding is worth what the documentation under it is worth. Concluding that an API cannot do something is an argument from silence, and silence carries weight in a reference that indexes every endpoint while proving little in a thin one. Thin documentation is itself a clause 3 finding rather than an excuse for an inconclusive one.
 
-What this half measures is parity with the human interface, not absolute power. Software with a fixed model that nobody can extend at runtime passes it vacuously, because both interfaces reach equally far, and that is fine. The failure it exists to catch is software whose admin interface can define fields, roles or object types that its own API cannot, which is clause 2's "an API covering a subset of what the interface can do". Report which of the two situations you found, because "the agent could not add a field" means nothing on its own.
+Capability the reference never mentions but the running system exposes still counts, because clause 3 accepts a generated schema, introspection or published metadata as self-description, and a caller that can find it can use it. Cite the schema or the introspection result there, the same way you would cite a documentation page.
 
-**Operate.** Using only what it just configured, the agent creates a record, finds it by something other than its identifier, updates it, deletes it, and is correctly refused an operation the narrowed role does not allow.
+**Run the round trip below when reading is not enough:** where the documentation is thin or contradicts itself, where something is documented but reported not to work, or where a vendor disputes a finding. It is corroboration, not a precondition for an entry.
 
-Chaining the two halves is the point. Configuration is what separates software built to be operated by an agent from software with an API bolted onto a subset of an admin interface, and operating against a model the agent defined itself is what proves the model is readable at runtime.
+**Configure the model.** Starting from a fresh instance, the agent changes the model itself: create an entity or collection, and add fields of more than one type.
+
+**Configure access to it.** The agent then grants access to what it has just built, narrower than full, through whatever grouping the software actually has: a role, a group, a team, or a permission level on that one resource. Where the software defines its own roles, the agent defines one and grants through it. Where the roles are a fixed set, assigning an existing one is the whole of the test.
+
+The access model has two planes, and only one of them is the software's to answer for. Who exists, and which groups they belong to, is the identity plane, and in an enterprise deployment that belongs to the identity provider and arrives over SCIM. Software that delegates it is not falling short of anything, and SCIM is a machine interface like any other, describing itself through `/Schemas` and `/ResourceTypes`. What a role permits in the software's own vocabulary, and which resources it reaches, is the authorization plane. No identity provider can hold that, because "may edit the Deals table but not delete records" is vocabulary that exists only inside the application, and SCIM's own `roles` and `entitlements` attributes carry a role's name onto a user without saying anything about what it permits. The authorization plane is what this half tests.
+
+What the configure half measures is parity with the human interface, not absolute power. Software with a fixed model that nobody can extend at runtime passes it vacuously, because both interfaces reach equally far, and software that has genuinely handed a plane to an identity provider passes for the same reason. The failure it exists to catch is an asymmetry inside one product: an admin interface that defines fields, roles or object types its own API cannot, which is clause 2's "an API covering a subset of what the interface can do". Report which of these you found, because "the agent could not add a field" means nothing on its own.
+
+Weigh the per-resource grant above the role definition. Scoping a table it has just built to one team is what an agent does constantly, while minting a named role with a custom permission bundle is a quarterly administrative act. Software that reaches every per-resource grant and falls short only at defining a new role has a narrow gap, and the write-up should say so in those words rather than reporting a blanket failure.
+
+**A refusal is not a gap.** A capability the machine interface refuses on authorization grounds is the access model working, and clause 5 is the reason: a differently scoped credential succeeds, and the refusal is the one a person would meet too. A capability with no machine-callable form fails clause 2 whatever reason is given for it, because the most privileged credential the software issues meets the same wall as the least. Tell the two apart by attempting the operation with that most privileged credential. Where a vendor documents a deliberate reason for withholding something, quote it, and say that the remedy is a scope rather than an endpoint.
+
+**A bootstrap step is not a gap.** Some software has a one-time setup action that unlocks the rest of its machine interface and then never recurs: enabling multi-user mode, creating the first administrator, issuing the first key. That is installation rather than parity, so "a fresh instance" above means one that has finished its own setup, and the round trip starts there. What fails clause 2 is an asymmetry that survives setup, such as a schema builder that stays read-only in production however the instance was installed, because no state exists in which the API reaches what the interface reaches. Where the bootstrap step itself has no machine-callable form, record it as a clause 3 finding about discovery, and say whether a caller could have found it in the published schema.
+
+**Operate.** Using only what it just configured, the agent creates a record, finds it by something other than its identifier, updates it, deletes it, and is correctly refused an operation the narrowed grant does not allow.
+
+Chaining configuration and operation is the point. Configuration is what separates software built to be operated by an agent from software with an API bolted onto a subset of an admin interface, and operating against a model the agent defined itself is what proves the model is readable at runtime.
 
 Throughout, the agent may read the software's own documentation, schema and metadata, and nothing else. It may not be handed instructions written for that specific product, a pre-built client library, or browser automation driving a human interface. Without those limits the test grades the agent rather than the software, because a capable agent can drive almost anything.
 
 **Clause 4 is checked separately,** and the round trip is blind to it. Confirm that a person can reach the same configuration and the same records through a shipped interface or an open protocol. Software that passes the round trip and fails this is agent-only, and belongs in [agent-only.md](agent-only.md). Agent-first means the admin interface is not needed, not that it is absent.
 
-Record the date, the agent and the model used. Results move as models improve, so an undated result is not evidence.
+Record the date and what you read, because documentation moves. If you ran the round trip live, record the agent and the model as well, since results move as models improve, and an undated result of either kind is not evidence.
 
 ## Gate two: the quality bar
 
@@ -66,7 +82,7 @@ Record the date, the agent and the model used. Results move as models improve, s
 - Work on a branch, not on `main`.
 - Say which category the entry belongs in, and open an issue first if you think a new category is needed.
 - Say, in the pull request body, how the entry meets each of clauses 1 to 4 and which of 5 to 7 it meets. Cite the project's own documentation, SDK source or a live response, not a summary or a search result.
-- Run the round trip above and report what happened: the agent and model you used, the date, what you configured, and where it needed help. A run that failed somewhere is still useful, and saying so is better than omitting it.
+- Work the clauses from what the software publishes, and link the page, the schema or the metadata behind each one. Where reading did not settle it and you ran the round trip above, report what happened: the agent and model you used, the date, what you configured, and where it needed help. A run that failed somewhere is still useful, and saying so is better than omitting it.
 - Add the entry in alphabetical order within its section.
 - If it duplicates an existing entry, say why it should replace that one.
 - Check spelling and grammar, and run `npx awesome-lint` before opening the pull request.

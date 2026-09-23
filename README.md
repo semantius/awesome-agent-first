@@ -16,6 +16,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [Content Management](#content-management)
 - [Enterprise Resource Planning (ERP)](#enterprise-resource-planning-erp)
 - [Commerce](#commerce)
+- [Project and Work Management](#project-and-work-management)
 - [Data Platforms](#data-platforms)
 - [Communication Systems](#communication-systems)
 - [Secrets and Access Management](#secrets-and-access-management)
@@ -42,6 +43,10 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 ## Commerce
 
 - [Saleor](https://saleor.io) - Headless commerce platform whose GraphQL API creates product types, attributes, channels and permission groups rather than only reading them, with a dashboard built on that same schema and apps issued scoped tokens that are revocable independently of any person. ([Source Code](https://github.com/saleor/saleor)) (`BSD-3-Clause`, `self-host`, `GraphQL`, `MCP`, `UI`)
+
+## Project and Work Management
+
+- [Plane](https://plane.so) - Work tracking and wiki platform whose REST API defines work item types, custom properties, states and member roles rather than only filling them, with a first-party MCP server of 28 tools governed by the same permissions and a query language for filtering. ([Source Code](https://github.com/makeplane/plane)) (`AGPL-3.0 core`, `self-host`, `MCP`, `REST`, `UI`)
 
 ## Data Platforms
 
