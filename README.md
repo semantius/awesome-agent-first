@@ -14,6 +14,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 - [Customer Relationship Management (CRM)](#customer-relationship-management-crm)
 - [Content Management](#content-management)
+- [Knowledge Bases](#knowledge-bases)
 - [Localization](#localization)
 - [Document Sharing](#document-sharing)
 - [Enterprise Resource Planning (ERP)](#enterprise-resource-planning-erp)
@@ -41,12 +42,17 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [Storyblok](https://www.storyblok.com) - Content platform whose Management API defines components and their fields, served to agents by a first-party hosted MCP endpoint with OAuth sign-in and tokens scoped to the spaces and permissions a caller needs, alongside a visual editor for people. (`hosted`, `REST`, `MCP`, `UI`)
 - [Webiny](https://www.webiny.com) - Self-hosted headless CMS whose Manage GraphQL API creates, updates and deletes content models and their fields, so its admin area is a client of the same schema an agent calls, with API keys scoped to the same permissions. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
 
+## Knowledge Bases
+
+- [AgentDocs](https://agentdocs.eu) - Documentation platform whose REST API and MCP server create spaces, pages and member roles rather than only reading them, with space-scoped tokens granting an agent editor access to exactly one space, keyword and semantic search across a workspace, and page versions recording which agent wrote them. (`hosted`, `MCP`, `REST`, `UI`)
+
 ## Localization
 
 - [Tolgee](https://tolgee.io) - Localization platform whose REST API creates projects, languages, namespaces and keys and sets each member's permission by scope and by language, described by an OpenAPI document the running server generates, with more than forty filters and a search parameter over translations. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Document Sharing
 
+- [Fastio](https://fast.io) - Cloud file storage whose REST API, CLI and MCP server reach the same organizations, workspaces, shares and member roles as its dashboard, with keys carrying an agent name and scoped per entity to read, write or administer, and a search that returns each file's own extracted metadata fields. (`hosted`, `MCP`, `REST`, `CLI`, `UI`)
 - [Papermark](https://www.papermark.com) - Document sharing and data room platform whose REST API creates data rooms, viewer groups, group members and per-document permissions rather than only handing out links, with a first-party CLI and MCP server, OAuth 2.1 tokens carrying scopes and full-text search across documents. ([Source Code](https://github.com/mfts/papermark)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Enterprise Resource Planning (ERP)
