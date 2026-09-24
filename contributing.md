@@ -27,7 +27,7 @@ And at least one of these.
 
 5. **Authorization is enforced by the system,** not re-implemented by every caller.
 6. **The software publishes machine-readable discovery metadata:** OpenAPI, OAuth authorization-server or protected-resource metadata, an MCP server card, `llms.txt`, or an agent-skills index.
-7. **Agents can hold their own credentials,** scoped and revocable independently of a person's session.
+7. **Agents can hold their own credentials,** scoped and revocable independently of a person's session, and act as a participant wherever the software has one (an assignee, a reviewer, a watcher), so that what the software records about who did what names the agent.
 
 ## Verifying clauses 2 and 3
 
@@ -63,7 +63,7 @@ Throughout, the agent may read the software's own documentation, schema and meta
 
 **Clause 4 is checked separately,** and the round trip is blind to it. Confirm that a person can reach the same configuration and the same records through a shipped interface or an open protocol. Software that passes the round trip and fails this is agent-only, and belongs in [agent-only.md](agent-only.md). Agent-first means the admin interface is not needed, not that it is absent.
 
-Record the date and what you read, because documentation moves. If you ran the round trip live, record the agent and the model as well, since results move as models improve, and an undated result of either kind is not evidence. An entry that names no agent was settled by reading, so there is nothing to label on the entries that were.
+Record what you read, and link it. If you ran the round trip live, record the agent and the model as well, since results move as models improve. An entry that names no agent was settled by reading, so there is nothing to label on the entries that were.
 
 ## Gate two: the quality bar
 
@@ -80,6 +80,7 @@ Record the date and what you read, because documentation moves. If you ran the r
 - **Connectors over someone else's system.** An MCP server in front of a product is a connector; what gets assessed is the product underneath.
 - **Products whose agent support was added afterwards** and covers only part of the product.
 - **Agent-only systems** that leave people no path to their own data. Those go in [agent-only.md](agent-only.md).
+- **Single-device software.** Software that runs for one person on one machine has no access model to grant through, because no second person or agent can reach the same data under access of their own. Local-first software is eligible only where it also serves or syncs a shared workspace, and that shared edition is what gets assessed.
 - **General-purpose databases and warehouses.** Administering a database over SQL and an API is ordinary rather than agent-first, and is equally true of Snowflake, Databricks, Redshift, ClickHouse and PostgreSQL itself. A data platform is listed only when it ships capability built for agents specifically: cheap isolated forks for an agent to work against, retrieval designed for filling agent context, or a first-party MCP server governed by the same permissions as everything else.
 - **Systems whose model is configured only through a UI.** If object types, fields, roles or permissions can be created only by clicking, the software fails clause 2 no matter how good the query API is. A CLI is an interface an agent can call, so the test is not whether the definition lives in a file, nor whether reaching the new model takes a deploy. It is whether the running software reconfigures itself when an agent hands it one, unaided. Software that reaches its new model through a command the vendor ships, a configuration file the agent edits or a repository workflow the agent runs passes, because an agent with a shell does all three. What fails is a step only a person can take.
 
@@ -88,7 +89,7 @@ Record the date and what you read, because documentation moves. If you ran the r
 - Work on a branch, not on `main`.
 - Say which category the entry belongs in, and open an issue first if you think a new category is needed.
 - Say, in the pull request body, how the entry meets each of clauses 1 to 4 and which of 5 to 7 it meets. Cite the project's own documentation, SDK source or a live response, not a summary or a search result.
-- Work the clauses from what the software publishes, and link the page, the schema or the metadata behind each one. Where reading did not settle it and you ran the round trip above, report what happened: the agent and model you used, the date, what you configured, and where it needed help. A run that failed somewhere is still useful, and saying so is better than omitting it.
+- Work the clauses from what the software publishes, and link the page, the schema or the metadata behind each one. Where reading did not settle it and you ran the round trip above, report what happened: the agent and model you used, what you configured, and where it needed help. A run that failed somewhere is still useful, and saying so is better than omitting it.
 - Add the entry in alphabetical order within its section.
 - If it duplicates an existing entry, say why it should replace that one.
 - Check spelling and grammar, and run `npx awesome-lint` before opening the pull request.
@@ -98,7 +99,7 @@ Record the date and what you read, because documentation moves. If you ran the r
 One line, a dash separator, an objective description that starts with a capital and ends with a period, no hard wrapping, and at most five tokens.
 
 ```
-- [Name](https://example.com) - Objective description of what it is. ([Source Code](https://github.com/x/y)) `MIT` `self-host` `MCP` `CLI` `UI`
+- [Name](https://example.com) - Objective description of what it is. ([Source Code](https://github.com/x/y)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 ```
 
-Describe the project, not this list. "Mobile operating system for Apple phones and tablets", not "Resources and tools for iOS development". Vendor taglines get rewritten.
+Describe the project, not this list. "Mobile operating system for Apple phones and tablets", not "Resources and tools for iOS development". Vendor taglines get rewritten. Leave out counts, such as the number of tools, endpoints or paths, because they go stale.

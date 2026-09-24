@@ -2,11 +2,11 @@
 
 > Software designed to be used by AI agents and by people, with the agent interface built in rather than bolted on.
 
-Agent-first software is built so that an autonomous agent can operate it directly, reaching everything a person can reach. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that is a primary way in rather than an afterthought, a model that describes itself at runtime, and data that stays with the operator rather than the vendor.
+Agent-first software is built so that an autonomous agent can configure and operate it directly, without the admin interface. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that is a primary way in rather than an afterthought, and a model that describes itself at runtime.
 
 Agent-first is not agent-only. "First" is a claim about priority, in the way *mobile-first* never meant "no desktop". The test is that an agent can configure and run the software without the admin interface, while a person still has one: not needed, but still provided. Software that shuts people out is recorded separately in [agent-only.md](agent-only.md), and every candidate assessed but not listed, with the reason and what would change it, is in [considered.md](considered.md).
 
-**Scope.** This list covers the producer side: software that an agent operates. It does not cover agents themselves, or the frameworks, orchestrators and SDKs used to build them. Adjacent lists are under [Related Lists](#related-lists). Every listed piece of software must meet [four inclusion clauses](contributing.md#gate-one-the-definition) and clear [a separate quality bar](contributing.md#gate-two-the-quality-bar), both spelled out there. The last two sections are reference material rather than entries: they hold the standards the clauses refer to, and the rubrics and writing worth reading. Only gated software entries carry tags.
+**Scope.** This list covers the producer side: software that an agent operates. It does not cover agents themselves, or the frameworks, orchestrators and SDKs used to build them. Adjacent lists are under [Related Lists](#related-lists). Every listed piece of software must meet [the inclusion criteria](contributing.md#gate-one-the-definition) and clear [a separate quality bar](contributing.md#gate-two-the-quality-bar), both spelled out there. The last two sections are reference material rather than entries: they hold the standards the clauses refer to, and the rubrics and writing worth reading. Only gated software entries carry tags.
 
 **Disclosure.** This list is maintained by the author of Semantius, listed under Data Platforms in its normal category slot, in the same format as every other entry, and held to the same two gates.
 
@@ -34,7 +34,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 - [ANOSF CRM](https://github.com/anosf/crm) - Self-hosted CRM whose web interface, REST API, MCP server and CLI all call one service layer, so every caller shares a permission model, an audit trail and a reversible change history. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Comp AI CRM](https://github.com/trycompai/crm) - Self-hosted CRM that republishes every tRPC procedure as a documented REST endpoint through a generated OpenAPI document, sharing one set of validation, middleware and services with the web interface, with workspace API keys for programmatic callers. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
-- [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native CRM with a REST API, role-scoped access, webhooks on record changes and a minimal responsive interface. Self-described as early beta. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
+- [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native CRM with a REST API, role-scoped access, webhooks on record changes and a minimal responsive interface. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
 - [Twenty](https://twenty.com) - CRM whose metadata API creates objects, fields and relations and then the roles that govern them, with object, field and row-level permissions set through the same mutations its settings screens call, an OpenAPI document generated from your own workspace and a built-in MCP endpoint. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Content Management
@@ -49,7 +49,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Localization
 
-- [Tolgee](https://tolgee.io) - Localization platform whose REST API creates projects, languages, namespaces and keys and sets each member's permission by scope and by language, described by an OpenAPI document the running server generates, with more than forty filters and a search parameter over translations. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Tolgee](https://tolgee.io) - Localization platform whose REST API creates projects, languages, namespaces and keys and sets each member's permission by scope and by language, described by an OpenAPI document the running server generates, with granular filters and a search parameter over translations. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Document Sharing
 
@@ -66,23 +66,24 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Project and Work Management
 
-- [Plane](https://plane.so) - Work tracking and wiki platform whose REST API defines work item types, custom properties, states and member roles rather than only filling them, with a first-party MCP server of 28 tools governed by the same permissions and a query language for filtering. ([Source Code](https://github.com/makeplane/plane)) (`AGPL-3.0 core`, `self-host`, `MCP`, `REST`, `UI`)
+- [monday.com](https://monday.com) - Work management platform whose GraphQL API creates boards, columns and teams and sets each team's and person's role on a board rather than only filling items, with every column type describing itself at runtime and a hosted MCP server behind OAuth with protected-resource metadata. (`hosted`, `GraphQL`, `MCP`, `UI`)
+- [Plane](https://plane.so) - Work tracking and wiki platform whose REST API defines work item types, custom properties, states and member roles rather than only filling them, with a first-party MCP server governed by the same permissions and a query language for filtering. ([Source Code](https://github.com/makeplane/plane)) (`AGPL-3.0 core`, `self-host`, `MCP`, `REST`, `UI`)
 
 ## Scheduling
 
-- [Cal.com](https://cal.com) - Scheduling platform whose v2 API defines organization roles and the permissions inside them, member attributes and per-event booking questions rather than only booking against them, published as an OpenAPI document of more than two hundred paths, with OAuth clients and managed users for programmatic callers. (`hosted`, `REST`, `OpenAPI`, `UI`)
+- [Cal.com](https://cal.com) - Scheduling platform whose v2 API defines organization roles and the permissions inside them, member attributes and per-event booking questions rather than only booking against them, published as an OpenAPI document, with OAuth clients and managed users for programmatic callers. (`hosted`, `REST`, `OpenAPI`, `UI`)
 
 ## Data Platforms
 
-- [Busabase](https://busabase.com) - Local-first workspace where bases, fields, views, records and docs are all reachable through an MCP server, a generated OpenAPI document and a CLI, with credentials that can be capped so an agent's material writes wait as reviewable change requests. ([Source Code](https://github.com/busabase/busabase)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [Directus](https://directus.com) - Maps an existing SQL database to REST and GraphQL APIs that the admin interface itself consumes, publishes an OpenAPI document and GraphQL SDL generated from your own schema, and governs its MCP server with the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0`, `self-host`, `MCP`, `REST`, `UI`)
-- [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational data platform whose SuperRepo path declares object types, links, interfaces and actions in TypeScript and deploys them with the Foundry CLI, alongside a platform API that lists object types with their descriptions and properties at runtime, filtered object search, and OAuth clients holding their own credentials. (`hosted`, `REST`, `CLI`, `OSDK`, `UI`)
-- [Semantius](https://www.semantius.com) - Puts role-based permissions and business logic inside PostgreSQL using row-level security, then generates the interface from that same model, so adding a table gives people working screens with no frontend code. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `SQL`, `CLI`, `UI`)
+- [Busabase](https://busabase.com) - Shared workspace of bases, docs and files whose Cloud API, MCP server and CLI create bases, fields and views and grant a person or a whole Space read, change-request, write or manage access on each node, with search across records, docs and files and credentials whose permission level decides whether an agent's writes merge or wait as reviewable change requests. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
+- [Directus](https://directus.com) - Data platform that maps an existing SQL database to REST and GraphQL APIs the admin interface itself consumes, with an OpenAPI document and GraphQL SDL generated from your own schema and a first-party MCP server governed by the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
+- [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational data platform whose SuperRepo path declares object types, links, interfaces and actions in TypeScript and deploys them with the Foundry CLI, alongside a platform API that lists object types with their descriptions and properties at runtime, filtered object search, and OAuth clients holding their own credentials. (`hosted`, `REST`, `CLI`, `UI`)
+- [Semantius](https://www.semantius.com) - Data platform whose MCP servers and CLI define entities, fields, relationships, roles and permissions as a model held as data, enforced inside PostgreSQL by row-level security, and generate the interface people use from that same model. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Superhuman Docs](https://superhuman.com/docs) - Doc and table workspace, formerly Coda, whose first-party MCP server creates tables, columns and views while its REST API grants per-document permissions to people, groups, domains or the whole workspace, with an OpenAPI document and both halves of OAuth discovery metadata published. (`hosted`, `MCP`, `OpenAPI`, `UI`)
 
 ## Communication Systems
 
-- [AgentMail](https://www.agentmail.to) - Provisions a durable email inbox per agent over a REST API, delivers inbound mail as structured JSON with search across threads, and serves the same mailbox over IMAP and SMTP. (`hosted`, `REST`, `MCP`, `IMAP`)
+- [AgentMail](https://www.agentmail.to) - Email platform that provisions a durable inbox per agent over a REST API, delivers inbound mail as structured JSON with search across threads, and serves the same mailbox over IMAP and SMTP. (`hosted`, `REST`, `MCP`, `IMAP`)
 - [AgenticMail](https://github.com/agenticmail/agenticmail) - Self-hosted email, SMS and voice platform giving each agent its own address, number and scoped key, with a bundled Stalwart mail server so the same mailbox opens in any IMAP client, and a web interface served by the same API the agents call. (`MIT`, `self-host`, `MCP`, `IMAP`, `UI`)
 - [Chimely](https://github.com/dodopayments/chimely) - Self-hostable in-app notification inbox in Rust and PostgreSQL whose committed OpenAPI covers environment creation, HMAC rotation and user management, so its operator dashboard is a client of the same API, alongside a drop-in inbox component for recipients. (`AGPL-3.0`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Hook0](https://www.hook0.com) - Webhooks as a service whose REST API creates organizations and the roles inside them, applications, event types, subscriptions and attenuable service tokens, so the dashboard and the subscriber portal are both clients of the OpenAPI document the server publishes, alongside a first-party CLI and MCP server. ([Source Code](https://github.com/hook0/hook0)) (`SSPL-1.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
@@ -90,12 +91,12 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Secrets and Access Management
 
-- [Infisical](https://infisical.com) - Secrets, PKI, KMS and privileged access platform where machine identities are first-class and revocable independently of any person, and custom roles and permissions are creatable through a published OpenAPI document of over 1,500 paths. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Infisical](https://infisical.com) - Secrets, PKI, KMS and privileged access platform where machine identities are first-class and revocable independently of any person, and custom roles and permissions are creatable through a published OpenAPI document. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Workflow Automation
 
 - [Activepieces](https://www.activepieces.com) - Workflow automation whose first-party MCP server creates flows, steps, tables, fields and records under OAuth with protected-resource metadata and semantic search over its action catalog, alongside a REST API and the builder people use for the same work. ([Source Code](https://github.com/activepieces/activepieces)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [n8n](https://n8n.io) - Self-hostable workflow automation whose public API creates and updates workflows, credentials, projects, roles, users and data-table columns rather than a subset of them, generated from an OpenAPI specification. ([Source Code](https://github.com/n8n-io/n8n)) (`fair-code`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [n8n](https://n8n.io) - Self-hostable workflow automation whose public API creates and updates workflows, credentials, projects, roles, users and data-table columns rather than a subset of them, generated from an OpenAPI specification. ([Source Code](https://github.com/n8n-io/n8n)) (`Sustainable Use`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Monitoring and Incident Response
 
@@ -103,7 +104,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Product Analytics
 
-- [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document of 2,243 operations downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
+- [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
 
 ## Standards
 
@@ -141,4 +142,4 @@ The discovery and identity surfaces that clauses 6 and 7 refer to: what software
 
 ## Footnotes
 
-Entries are checked against each project's own documentation, source or a live response, and every check is dated. Facts go stale and mistakes get made. If something here is wrong about your project, open an issue or a pull request with a link to what shows otherwise, and it will be corrected quickly. The same applies to `considered.md` and `agent-only.md`, linked above, where the reasoning for not listing something is written down.
+Entries are checked against each project's own documentation, source or a live response. Facts go stale and mistakes get made. If something here is wrong about your project, open an issue or a pull request with a link to what shows otherwise, and it will be corrected quickly. The same applies to `considered.md` and `agent-only.md`, linked above, where the reasoning for not listing something is written down.
