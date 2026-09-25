@@ -58,6 +58,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Enterprise Resource Planning (ERP)
 
+- [ERPNext](https://erpnext.com) - ERP on the Frappe Framework whose REST API creates custom DocTypes, custom fields, roles and per-DocType permissions through the same document API its Desk interface uses, with a meta endpoint returning every field's label, type and description at runtime, OAuth discovery metadata with dynamic client registration, and agents holding their own user and API key. ([Source Code](https://github.com/frappe/erpnext)) (`GPL-3.0`, `self-host`, `hosted`, `REST`, `UI`)
 - [Odoo](https://www.odoo.com) - ERP whose external API creates models, fields and access rights through the same meta-models its own web client reads, documented by Odoo as altering models and fields on the fly, with `fields_get` returning every field's label, help text and type at runtime. ([Source Code](https://github.com/odoo/odoo)) (`LGPL-3.0`, `self-host`, `RPC`, `UI`)
 
 ## Commerce
@@ -75,6 +76,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Data Platforms
 
+- [Baserow](https://baserow.io) - No-code database whose REST API creates tables and described fields and assigns roles to a person or a team on a whole workspace, one database or one table, described by an OpenAPI document the server generates, with full-text search over rows, database tokens limited per table and operation, and a per-workspace MCP endpoint. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Busabase](https://busabase.com) - Shared workspace of bases, docs and files whose Cloud API, MCP server and CLI create bases, fields and views and grant a person or a whole Space read, change-request, write or manage access on each node, with search across records, docs and files and credentials whose permission level decides whether an agent's writes merge or wait as reviewable change requests. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
 - [Directus](https://directus.com) - Data platform that maps an existing SQL database to REST and GraphQL APIs the admin interface itself consumes, with an OpenAPI document and GraphQL SDL generated from your own schema and a first-party MCP server governed by the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
 - [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational data platform whose SuperRepo path declares object types, links, interfaces and actions in TypeScript and deploys them with the Foundry CLI, alongside a platform API that lists object types with their descriptions and properties at runtime, filtered object search, and OAuth clients holding their own credentials. (`hosted`, `REST`, `CLI`, `UI`)
