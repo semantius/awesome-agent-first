@@ -2,7 +2,7 @@
 
 > Software designed to be used by AI agents and by people, with the agent interface built in rather than bolted on.
 
-Agent-first software is built so that an autonomous agent can configure and operate it directly, without the admin interface. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that is a primary way in rather than an afterthought, and a model that describes itself at runtime.
+Agent-first software is built so that an autonomous agent can configure and operate it directly, without the admin interface. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that is a primary way in rather than an afterthought, and guidance from its vendor that tells an agent how to operate it. People get an app; agents get an interface they can run, and guidance that tells them how.
 
 Agent-first is not agent-only. "First" is a claim about priority, in the way *mobile-first* never meant "no desktop". The test is that an agent can configure and run the software without the admin interface, while a person still has one: not needed, but still provided. Software that shuts people out is recorded separately in [agent-only.md](agent-only.md), and every candidate assessed but not listed, with the reason and what would change it, is in [considered.md](considered.md).
 
@@ -41,6 +41,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 - [Contentful](https://www.contentful.com) - Content platform whose Content Management API defines content types, editor interfaces, locales and custom roles rather than only filling them, with a first-party MCP server covering the same surface and a web app that is a client of that API. (`hosted`, `REST`, `MCP`, `UI`)
 - [Storyblok](https://www.storyblok.com) - Content platform whose Management API defines components and their fields, served to agents by a first-party hosted MCP endpoint with OAuth sign-in and tokens scoped to the spaces and permissions a caller needs, alongside a visual editor for people. (`hosted`, `REST`, `MCP`, `UI`)
+- [Strapi](https://strapi.io) - Headless CMS whose content types are schema files an agent writes and deploys, with a Users and Permissions API that creates roles and sets their permissions on each content type, API tokens scoped to full, read-only or custom access, and a built-in MCP server over the content. ([Source Code](https://github.com/strapi/strapi)) (`MIT core`, `self-host`, `MCP`, `REST`, `UI`)
 - [Webiny](https://www.webiny.com) - Self-hosted headless CMS whose Manage GraphQL API creates, updates and deletes content models and their fields, so its admin area is a client of the same schema an agent calls, with API keys scoped to the same permissions. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
 
 ## Knowledge Bases
@@ -76,6 +77,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 
 ## Data Platforms
 
+- [Appwrite](https://appwrite.io) - Backend platform whose TablesDB API creates tables and typed columns and grants each table to users, teams, team roles or labels, with project API keys scoped by service, a hosted MCP server and a CLI that pushes a project's tables, columns and teams from a configuration file. ([Source Code](https://github.com/appwrite/appwrite)) (`BSD-3-Clause`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Baserow](https://baserow.io) - No-code database whose REST API creates tables and described fields and assigns roles to a person or a team on a whole workspace, one database or one table, described by an OpenAPI document the server generates, with full-text search over rows, database tokens limited per table and operation, and a per-workspace MCP endpoint. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Busabase](https://busabase.com) - Shared workspace of bases, docs and files whose Cloud API, MCP server and CLI create bases, fields and views and grant a person or a whole Space read, change-request, write or manage access on each node, with search across records, docs and files and credentials whose permission level decides whether an agent's writes merge or wait as reviewable change requests. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
 - [Directus](https://directus.com) - Data platform that maps an existing SQL database to REST and GraphQL APIs the admin interface itself consumes, with an OpenAPI document and GraphQL SDL generated from your own schema and a first-party MCP server governed by the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
@@ -108,10 +110,11 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 ## Product Analytics
 
 - [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
+- [Umami](https://umami.is) - Privacy-focused web analytics whose REST API creates websites, teams, team roles, goals, funnels and segments, with per-user API keys that inherit the owner's website and team permissions and a read-only MCP server bound by the same checks. ([Source Code](https://github.com/umami-software/umami)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Standards
 
-The discovery and identity surfaces that clauses 6 and 7 refer to: what software publishes about itself, so a caller needs no out-of-band instructions, and how an agent comes to hold its own credentials. Adoption across sixteen origins is measured in [discovery-survey.md](discovery-survey.md).
+The discovery and identity surfaces that clauses 6 and 7 refer to: what software publishes about itself so a caller can find it, and how an agent comes to hold its own credentials. Adoption across sixteen origins is measured in [discovery-survey.md](discovery-survey.md).
 
 - [Agent Auth Protocol](https://agentauthprotocol.com) - Draft open standard giving each agent its own keypair, scoped capabilities and revocation independent of a human session, advertised through a well-known discovery document. ([Source Code](https://github.com/better-auth/agent-auth-protocol))
 - [Agent Skills](https://agentskills.io) - Index format listing the tasks a service supports, served at a well-known path.
