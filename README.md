@@ -6,6 +6,8 @@ Agent-first software is built so that an autonomous agent can configure and oper
 
 Agent-first is not agent-only. "First" is a claim about priority, in the way *mobile-first* never meant "no desktop". The test is that an agent can configure and run the software without the admin interface, while a person still has one: not needed, but still provided. Software that shuts people out is recorded separately in [agent-only.md](agent-only.md), and every candidate assessed but not listed, with the reason and what would change it, is in [considered.md](considered.md).
 
+Always-on agents gain the most from agent-first software, because they work while nobody is watching. Grok Bot and Meta's Muse each get a cloud computer of their own, but mostly reach other software through its screens, signed in as a person: they act with all of that person's access, the software records their work as the person's, and their work breaks when a screen changes. Agent-first software gives such an agent an interface and guidance built for it, covering the fields and roles as well as the records, and can give it a credential of its own, so the records name the agent and not the person. An MCP server bolted onto a product helps only as far as its authors wrapped it, often the records alone.
+
 **Scope.** This list covers the producer side: software that an agent operates. It does not cover agents themselves, or the frameworks, orchestrators and SDKs used to build them. Adjacent lists are under [Related Lists](#related-lists). Every listed piece of software must meet [the inclusion criteria](contributing.md#gate-one-the-definition) and clear [a separate quality bar](contributing.md#gate-two-the-quality-bar), both spelled out there. The last two sections are reference material rather than entries: they hold the standards the clauses refer to, and the rubrics and writing worth reading. Only gated software entries carry tags.
 
 **Disclosure.** This list is maintained by the author of Semantius, listed under Data Platforms in its normal category slot, in the same format as every other entry, and held to the same two gates.
@@ -13,6 +15,7 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 ## Contents
 
 - [Customer Relationship Management (CRM)](#customer-relationship-management-crm)
+- [Customer Support](#customer-support)
 - [Content Management](#content-management)
 - [Knowledge Bases](#knowledge-bases)
 - [Localization](#localization)
@@ -36,6 +39,10 @@ Agent-first is not agent-only. "First" is a claim about priority, in the way *mo
 - [Comp AI CRM](https://github.com/trycompai/crm) - Self-hosted CRM that republishes every tRPC procedure as a documented REST endpoint through a generated OpenAPI document, sharing one set of validation, middleware and services with the web interface, with workspace API keys for programmatic callers. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native CRM with a REST API, role-scoped access, webhooks on record changes and a minimal responsive interface. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
 - [Twenty](https://twenty.com) - CRM whose metadata API creates objects, fields and relations and then the roles that govern them, with object, field and row-level permissions set through the same mutations its settings screens call, an OpenAPI document generated from your own workspace and a built-in MCP endpoint. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+
+## Customer Support
+
+- [Plain](https://www.plain.com) - Customer support platform whose GraphQL API creates thread field schemas, label types, tiers, SLAs and workflows, assigns members to roles and defines custom roles that limit which threads they see by label, tier, channel, tenant or company, with machine users and their scoped API keys created through the same API and assignable to threads. (`hosted`, `GraphQL`, `MCP`, `UI`)
 
 ## Content Management
 
