@@ -116,6 +116,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 ## Product Analytics
 
+- [Databuddy](https://www.databuddy.cc) - Cookieless web and product analytics with funnels, goals, feature flags, short links and uptime monitoring, whose REST API and hosted MCP server manage websites, goals, funnels, flags and monitors under API keys scoped to individual websites. ([Source Code](https://github.com/databuddy-analytics/Databuddy)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
 - [Umami](https://umami.is) - Privacy-focused web analytics whose REST API creates websites, teams, team roles, goals, funnels and segments, with per-user API keys that inherit the owner's website and team permissions and a read-only MCP server bound by the same checks. ([Source Code](https://github.com/umami-software/umami)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
