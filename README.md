@@ -35,90 +35,92 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 ## Customer Relationship Management (CRM)
 
-- [ANOSF CRM](https://github.com/anosf/crm) - Self-hosted CRM whose web interface, REST API, MCP server and CLI all call one service layer, so every caller shares a permission model, an audit trail and a reversible change history. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
-- [Comp AI CRM](https://github.com/trycompai/crm) - Self-hosted CRM that republishes every tRPC procedure as a documented REST endpoint through a generated OpenAPI document, sharing one set of validation, middleware and services with the web interface, with workspace API keys for programmatic callers. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
-- [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native CRM with a REST API, role-scoped access, webhooks on record changes and a minimal responsive interface. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
-- [Twenty](https://twenty.com) - CRM whose metadata API creates objects, fields and relations and then the roles that govern them, with object, field and row-level permissions set through the same mutations its settings screens call, an OpenAPI document generated from your own workspace and a built-in MCP endpoint. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [ANOSF CRM](https://github.com/anosf/crm) - CRM whose REST API, MCP server and CLI share one service layer, with a reversible audit trail. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
+- [Comp AI CRM](https://github.com/trycompai/crm) - CRM designed for AI agents. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native, API-first CRM built for AI agents. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
+- [Twenty](https://twenty.com) - Modular CRM built as an open alternative to Salesforce. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Customer Support
 
-- [Plain](https://www.plain.com) - Customer support platform whose GraphQL API creates thread field schemas, label types, tiers, SLAs and workflows, assigns members to roles and defines custom roles that limit which threads they see by label, tier, channel, tenant or company, with machine users and their scoped API keys created through the same API and assignable to threads. (`hosted`, `GraphQL`, `MCP`, `UI`)
+- [Plain](https://www.plain.com) - Support platform for B2B teams that brings email, Slack, Microsoft Teams, chat, Discord and contact forms into one queue. (`hosted`, `GraphQL`, `MCP`, `UI`)
 
 ## Content Management
 
-- [Contentful](https://www.contentful.com) - Content platform whose Content Management API defines content types, editor interfaces, locales and custom roles rather than only filling them, with a first-party MCP server covering the same surface and a web app that is a client of that API. (`hosted`, `REST`, `MCP`, `UI`)
-- [Storyblok](https://www.storyblok.com) - Content platform whose Management API defines components and their fields, served to agents by a first-party hosted MCP endpoint with OAuth sign-in and tokens scoped to the spaces and permissions a caller needs, alongside a visual editor for people. (`hosted`, `REST`, `MCP`, `UI`)
-- [Strapi](https://strapi.io) - Headless CMS whose content types are schema files an agent writes and deploys, with a Users and Permissions API that creates roles and sets their permissions on each content type, API tokens scoped to full, read-only or custom access, and a built-in MCP server over the content. ([Source Code](https://github.com/strapi/strapi)) (`MIT core`, `self-host`, `MCP`, `REST`, `UI`)
-- [Webiny](https://www.webiny.com) - Self-hosted headless CMS whose Manage GraphQL API creates, updates and deletes content models and their fields, so its admin area is a client of the same schema an agent calls, with API keys scoped to the same permissions. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
+- [Contentful](https://www.contentful.com) - API-first composable content platform. (`hosted`, `REST`, `MCP`, `UI`)
+- [Storyblok](https://www.storyblok.com) - Headless CMS with a visual editor. (`hosted`, `REST`, `MCP`, `UI`)
+- [Strapi](https://strapi.io) - Headless CMS written in JavaScript and TypeScript. ([Source Code](https://github.com/strapi/strapi)) (`MIT core`, `self-host`, `MCP`, `REST`, `UI`)
+- [Webiny](https://www.webiny.com) - Headless CMS that runs on AWS serverless services, with multi-tenancy. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
 
 ## Knowledge Bases
 
-- [AgentDocs](https://agentdocs.eu) - Documentation platform whose REST API and MCP server create spaces, pages and member roles rather than only reading them, with space-scoped tokens granting an agent editor access to exactly one space, keyword and semantic search across a workspace, and page versions recording which agent wrote them. (`hosted`, `MCP`, `REST`, `UI`)
+- [AgentDocs](https://agentdocs.eu) - Collaborative Markdown documentation platform where AI agents are first-class users. (`hosted`, `MCP`, `REST`, `UI`)
 
 ## Localization
 
-- [Tolgee](https://tolgee.io) - Localization platform whose REST API creates projects, languages, namespaces and keys and sets each member's permission by scope and by language, described by an OpenAPI document the running server generates, with granular filters and a search parameter over translations. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Tolgee](https://tolgee.io) - Localization platform with in-app translation and collaborative tools. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Document Sharing
 
-- [Fastio](https://fast.io) - Cloud file storage whose REST API, CLI and MCP server reach the same organizations, workspaces, shares and member roles as its dashboard, with keys carrying an agent name and scoped per entity to read, write or administer, and a search that returns each file's own extracted metadata fields. (`hosted`, `MCP`, `REST`, `CLI`, `UI`)
-- [Papermark](https://www.papermark.com) - Document sharing and data room platform whose REST API creates data rooms, viewer groups, group members and per-document permissions rather than only handing out links, with a first-party CLI and MCP server, OAuth 2.1 tokens carrying scopes and full-text search across documents. ([Source Code](https://github.com/mfts/papermark)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Fastio](https://fast.io) - Project workspaces that hold the files for a team and its AI agents. (`hosted`, `MCP`, `REST`, `CLI`, `UI`)
+- [Papermark](https://www.papermark.com) - Data room and document sharing platform with page-level analytics and granular permissions. ([Source Code](https://github.com/mfts/papermark)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Enterprise Resource Planning (ERP)
 
-- [ERPNext](https://erpnext.com) - ERP on the Frappe Framework whose REST API creates custom DocTypes, custom fields, roles and per-DocType permissions through the same document API its Desk interface uses, with a meta endpoint returning every field's label, type and description at runtime, OAuth discovery metadata with dynamic client registration, and agents holding their own user and API key. ([Source Code](https://github.com/frappe/erpnext)) (`GPL-3.0`, `self-host`, `hosted`, `REST`, `UI`)
-- [Odoo](https://www.odoo.com) - ERP whose external API creates models, fields and access rights through the same meta-models its own web client reads, documented by Odoo as altering models and fields on the fly, with `fields_get` returning every field's label, help text and type at runtime. ([Source Code](https://github.com/odoo/odoo)) (`LGPL-3.0`, `self-host`, `RPC`, `UI`)
+- [ERPNext](https://erpnext.com) - ERP for manufacturing, distribution, retail, trading, services and education. ([Source Code](https://github.com/frappe/erpnext)) (`GPL-3.0`, `self-host`, `hosted`, `REST`, `UI`)
+- [Odoo](https://www.odoo.com) - Suite of business applications spanning ERP, CRM, eCommerce and CMS. ([Source Code](https://github.com/odoo/odoo)) (`LGPL-3.0`, `self-host`, `RPC`, `UI`)
 
 ## Commerce
 
-- [Saleor](https://saleor.io) - Headless commerce platform whose GraphQL API creates product types, attributes, channels and permission groups rather than only reading them, with a dashboard built on that same schema and apps issued scoped tokens that are revocable independently of any person. ([Source Code](https://github.com/saleor/saleor)) (`BSD-3-Clause`, `self-host`, `GraphQL`, `MCP`, `UI`)
+- [Saleor](https://saleor.io) - Headless, GraphQL-first e-commerce platform. ([Source Code](https://github.com/saleor/saleor)) (`BSD-3-Clause`, `self-host`, `GraphQL`, `MCP`, `UI`)
 
 ## Project and Work Management
 
-- [monday.com](https://monday.com) - Work management platform whose GraphQL API creates boards, columns and teams and sets each team's and person's role on a board rather than only filling items, with every column type describing itself at runtime and a hosted MCP server behind OAuth with protected-resource metadata. (`hosted`, `GraphQL`, `MCP`, `UI`)
-- [Plane](https://plane.so) - Work tracking and wiki platform whose REST API defines work item types, custom properties, states and member roles rather than only filling them, with a first-party MCP server governed by the same permissions and a query language for filtering. ([Source Code](https://github.com/makeplane/plane)) (`AGPL-3.0 core`, `self-host`, `MCP`, `REST`, `UI`)
+- [monday.com](https://monday.com) - Work platform where people and AI agents manage and run work together. (`hosted`, `GraphQL`, `MCP`, `UI`)
+- [Plane](https://plane.so) - Project management with projects and a wiki, for teams and AI agents. ([Source Code](https://github.com/makeplane/plane)) (`AGPL-3.0 core`, `self-host`, `MCP`, `REST`, `UI`)
 
 ## Scheduling
 
-- [Cal.com](https://cal.com) - Scheduling platform whose v2 API defines organization roles and the permissions inside them, member attributes and per-event booking questions rather than only booking against them, published as an OpenAPI document, with OAuth clients and managed users for programmatic callers. (`hosted`, `REST`, `OpenAPI`, `UI`)
+- [Cal.com](https://cal.com) - Customizable scheduling software for online bookings. (`hosted`, `REST`, `OpenAPI`, `UI`)
 
 ## Data Platforms
 
-- [Appwrite](https://appwrite.io) - Backend platform whose TablesDB API creates tables and typed columns and grants each table to users, teams, team roles or labels, with project API keys scoped by service, a hosted MCP server and a CLI that pushes a project's tables, columns and teams from a configuration file. ([Source Code](https://github.com/appwrite/appwrite)) (`BSD-3-Clause`, `self-host`, `MCP`, `CLI`, `UI`)
-- [Baserow](https://baserow.io) - No-code database whose REST API creates tables and described fields and assigns roles to a person or a team on a whole workspace, one database or one table, described by an OpenAPI document the server generates, with full-text search over rows, database tokens limited per table and operation, and a per-workspace MCP endpoint. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [Busabase](https://busabase.com) - Shared workspace of bases, docs and files whose Cloud API, MCP server and CLI create bases, fields and views and grant a person or a whole Space read, change-request, write or manage access on each node, with search across records, docs and files and credentials whose permission level decides whether an agent's writes merge or wait as reviewable change requests. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
-- [Directus](https://directus.com) - Data platform that maps an existing SQL database to REST and GraphQL APIs the admin interface itself consumes, with an OpenAPI document and GraphQL SDL generated from your own schema and a first-party MCP server governed by the same permission model. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
-- [NocoDB](https://nocodb.com) - Spreadsheet-style database whose v3 meta API creates tables and described fields and assigns each person a role on a base, with an OpenAPI document generated for every base at runtime, granular `where` filtering, and a first-party MCP server governed by the same roles. ([Source Code](https://github.com/nocodb/nocodb)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational data platform whose SuperRepo path declares object types, links, interfaces and actions in TypeScript and deploys them with the Foundry CLI, alongside a platform API that lists object types with their descriptions and properties at runtime, filtered object search, and OAuth clients holding their own credentials. (`hosted`, `REST`, `CLI`, `UI`)
-- [Semantius](https://www.semantius.com) - Data platform whose MCP servers and CLI define entities, fields, relationships, roles and permissions as a model held as data, enforced inside PostgreSQL by row-level security, and generate the interface people use from that same model. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
-- [Superhuman Docs](https://superhuman.com/docs) - Doc and table workspace, formerly Coda, whose first-party MCP server creates tables, columns and views while its REST API grants per-document permissions to people, groups, domains or the whole workspace, with an OpenAPI document and both halves of OAuth discovery metadata published. (`hosted`, `MCP`, `OpenAPI`, `UI`)
+- [Appwrite](https://appwrite.io) - Developer platform with authentication, databases, storage, functions, messaging and sites. ([Source Code](https://github.com/appwrite/appwrite)) (`BSD-3-Clause`, `self-host`, `MCP`, `CLI`, `UI`)
+- [Baserow](https://baserow.io) - No-code database and application builder. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Busabase](https://busabase.com) - Database and workspace shared by agents and people, where every change keeps its history and important writes can wait for review. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
+- [Directus](https://directus.com) - Collaborative backend and headless CMS over any database, with a no-code interface. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
+- [NocoDB](https://nocodb.com) - No-code platform on top of a database, as an alternative to Airtable. ([Source Code](https://github.com/nocodb/nocodb)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational layer that sits on top of the data integrated into Palantir Foundry. (`hosted`, `REST`, `CLI`, `UI`)
+- [Semantius](https://www.semantius.com) - Data platform on Postgres that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
+- [Superhuman Docs](https://superhuman.com/docs) - Workspace of docs with tables, formulas and buttons, formerly Coda. (`hosted`, `MCP`, `OpenAPI`, `UI`)
 
 ## Communication Systems
 
-- [AgentMail](https://www.agentmail.to) - Email platform that provisions a durable inbox per agent over a REST API, delivers inbound mail as structured JSON with search across threads, and serves the same mailbox over IMAP and SMTP. (`hosted`, `REST`, `MCP`, `IMAP`)
-- [AgenticMail](https://github.com/agenticmail/agenticmail) - Self-hosted email, SMS and voice platform giving each agent its own address, number and scoped key, with a bundled Stalwart mail server so the same mailbox opens in any IMAP client, and a web interface served by the same API the agents call. (`MIT`, `self-host`, `MCP`, `IMAP`, `UI`)
-- [Chimely](https://github.com/dodopayments/chimely) - Self-hostable in-app notification inbox in Rust and PostgreSQL whose committed OpenAPI covers environment creation, HMAC rotation and user management, so its operator dashboard is a client of the same API, alongside a drop-in inbox component for recipients. (`AGPL-3.0`, `self-host`, `REST`, `OpenAPI`, `UI`)
-- [Hook0](https://www.hook0.com) - Webhooks as a service whose REST API creates organizations and the roles inside them, applications, event types, subscriptions and attenuable service tokens, so the dashboard and the subscriber portal are both clients of the OpenAPI document the server publishes, alongside a first-party CLI and MCP server. ([Source Code](https://github.com/hook0/hook0)) (`SSPL-1.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [Novu](https://novu.co) - Notification infrastructure whose API defines workflows, layouts, translations and provider integrations rather than only triggering them, published as a live OpenAPI document, with a dashboard for operators and an inbox component for recipients. ([Source Code](https://github.com/novuhq/novu)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [AgentMail](https://www.agentmail.to) - Email provider that gives AI agents real inboxes over an API. (`hosted`, `REST`, `MCP`, `IMAP`)
+- [AgenticMail](https://github.com/agenticmail/agenticmail) - Email, SMS and phone-call infrastructure for AI agents. (`MIT`, `self-host`, `MCP`, `IMAP`, `UI`)
+- [Chimely](https://github.com/dodopayments/chimely) - In-app notification inbox with an HTTP API and a drop-in React inbox component. (`AGPL-3.0`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Hook0](https://www.hook0.com) - Webhooks as a service that handles delivery, retries and security for outgoing webhooks. ([Source Code](https://github.com/hook0/hook0)) (`SSPL-1.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Novu](https://novu.co) - Notification infrastructure that reaches users in-app and over email, SMS, push and messaging apps through one API. ([Source Code](https://github.com/novuhq/novu)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Secrets and Access Management
 
-- [Infisical](https://infisical.com) - Secrets, PKI, KMS and privileged access platform where machine identities are first-class and revocable independently of any person, and custom roles and permissions are creatable through a published OpenAPI document. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [authentik](https://goauthentik.io) - Identity provider and single sign-on platform. ([Source Code](https://github.com/goauthentik/authentik)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Infisical](https://infisical.com) - Identity security platform for managing identities, secrets, certificates and access. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Workflow Automation
 
-- [Activepieces](https://www.activepieces.com) - Workflow automation whose first-party MCP server creates flows, steps, tables, fields and records under OAuth with protected-resource metadata and semantic search over its action catalog, alongside a REST API and the builder people use for the same work. ([Source Code](https://github.com/activepieces/activepieces)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [n8n](https://n8n.io) - Self-hostable workflow automation whose public API creates and updates workflows, credentials, projects, roles, users and data-table columns rather than a subset of them, generated from an OpenAPI specification. ([Source Code](https://github.com/n8n-io/n8n)) (`Sustainable Use`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Activepieces](https://www.activepieces.com) - Workspace combining AI chat, agents, automation flows and tables with app integrations. ([Source Code](https://github.com/activepieces/activepieces)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [FlowFuse](https://flowfuse.com) - Industrial data platform for building, managing, scaling and securing Node-RED solutions. ([Source Code](https://github.com/FlowFuse/flowfuse)) (`Apache-2.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [n8n](https://n8n.io) - Workflow automation platform that combines visual building with custom code and AI capabilities. ([Source Code](https://github.com/n8n-io/n8n)) (`Sustainable Use`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Monitoring and Incident Response
 
-- [Keep](https://www.keephq.dev) - Alert and incident platform whose API creates roles, permissions, groups, users and scoped API keys as well as workflows, provider integrations and deduplication rules, with an OpenAPI document served by the running instance and expression-based search across alerts. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Keep](https://www.keephq.dev) - Alert management and AIOps platform. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 
 ## Product Analytics
 
-- [Databuddy](https://www.databuddy.cc) - Cookieless web and product analytics with funnels, goals, feature flags, short links and uptime monitoring, whose REST API and hosted MCP server manage websites, goals, funnels, flags and monitors under API keys scoped to individual websites. ([Source Code](https://github.com/databuddy-analytics/Databuddy)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [PostHog](https://posthog.com) - Product analytics, session replay, feature flags and a data warehouse whose OpenAPI document downloads without an account, with roles, per-object grants and property-level restrictions that govern its hosted MCP server and SQL editor the same way they govern the interface. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
-- [Umami](https://umami.is) - Privacy-focused web analytics whose REST API creates websites, teams, team roles, goals, funnels and segments, with per-user API keys that inherit the owner's website and team permissions and a read-only MCP server bound by the same checks. ([Source Code](https://github.com/umami-software/umami)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Databuddy](https://www.databuddy.cc) - Cookieless product analytics for visitors, events, funnels and goals. ([Source Code](https://github.com/databuddy-analytics/Databuddy)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [PostHog](https://posthog.com) - Developer platform for analytics, session replay, feature flags, experiments, error tracking, logs and AI observability. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
+- [Umami](https://umami.is) - Web and product analytics without cookies. ([Source Code](https://github.com/umami-software/umami)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Standards
 
