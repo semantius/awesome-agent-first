@@ -1,12 +1,12 @@
 # Awesome Agent First [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Software designed to be used by AI agents and by people, with the agent interface built in rather than bolted on.
+> Software that AI agents and people can both use fully, without the agent falling back to a browser.
 
-Agent-first software is built so that an autonomous agent can configure and operate it directly, without the admin interface. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that is a primary way in rather than an afterthought, and guidance from its vendor that tells an agent how to operate it. People get an app; agents get an interface they can run, and guidance that tells them how.
+Agent-first software can be used fully by an autonomous agent, within whatever access it has been given, without falling back to a browser. It is a *producer*: it exposes capability, and an agent consumes it. The software gains no agency of its own. What makes it agent-first is how it exposes itself: a machine-callable interface that covers everything a user does, and guidance from its vendor that tells an agent how to work in it. People get an app; agents get an interface they can run, and guidance that tells them how.
 
-Agent-first is not agent-only. "First" is a claim about priority, in the way *mobile-first* never meant "no desktop". The test is that an agent can configure and run the software without the admin interface, while a person still has one: not needed, but still provided. Software that shuts people out is recorded separately in [agent-only.md](agent-only.md), and every candidate assessed but not listed, with the reason and what would change it, is in [considered.md](considered.md).
+Agent-first is not agent-only. "First" is a claim about priority, in the way *mobile-first* never meant "no desktop". The test is that an agent can do its work without a browser, while a person still has an interface of their own: not needed by the agent, but still provided. Software that shuts people out is recorded separately in [agent-only.md](agent-only.md), and candidates that failed a clause or the quality bar, with the reason and what would change it, are in [considered.md](considered.md).
 
-Always-on agents gain the most from agent-first software, because they work while nobody is watching. Grok Bot and Meta's Muse each get a cloud computer of their own, but mostly reach other software through its screens, signed in as a person: they act with all of that person's access, the software records their work as the person's, and their work breaks when a screen changes. Agent-first software gives such an agent an interface and guidance built for it, covering the fields and roles as well as the records, and can give it a credential of its own, so the records name the agent and not the person. An MCP server bolted onto a product helps only as far as its authors wrapped it, often the records alone.
+Always-on agents gain the most from agent-first software, because they work while nobody is watching. Grok Bot and Meta's Muse each get a cloud computer of their own, but mostly reach other software through its screens, signed in as a person: they act with all of that person's access, the software records their work as the person's, and their work breaks when a screen changes. Agent-first software gives such an agent an interface and guidance built for it, covering everything a user does rather than the records alone, and can give it a credential of its own, so the records name the agent and not the person. An MCP server that wraps part of a product helps only as far as it reaches, and the agent falls back to the screens for the rest.
 
 **Scope.** This list covers the producer side: software that an agent operates. It does not cover agents themselves, or the frameworks, orchestrators and SDKs used to build them. Adjacent lists are under [Related Lists](#related-lists). Every listed piece of software must meet [the inclusion criteria](contributing.md#gate-one-the-definition) and clear [a separate quality bar](contributing.md#gate-two-the-quality-bar), both spelled out there. The last two sections are reference material rather than entries: they hold the standards the clauses refer to, and the rubrics and writing worth reading. Only gated software entries carry tags.
 
@@ -38,6 +38,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [ANOSF CRM](https://github.com/anosf/crm) - CRM whose REST API, MCP server and CLI share one service layer, with a reversible audit trail. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Comp AI CRM](https://github.com/trycompai/crm) - CRM designed for AI agents. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native, API-first CRM built for AI agents. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
+- [Planhat](https://www.planhat.com) - Customer platform for B2B commercial teams that brings customer data, collaboration and automation together across the customer lifecycle. (`hosted`, `REST`, `MCP`, `UI`)
 - [Twenty](https://twenty.com) - Modular CRM built as an open alternative to Salesforce. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Customer Support
@@ -105,6 +106,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 - [authentik](https://goauthentik.io) - Identity provider and single sign-on platform. ([Source Code](https://github.com/goauthentik/authentik)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Infisical](https://infisical.com) - Identity security platform for managing identities, secrets, certificates and access. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Keyorix](https://keyorix.com) - Secrets management server with versioned secrets, dynamic credentials and rotation. ([Source Code](https://github.com/keyorixhq/keyorix)) (`AGPL-3.0`, `self-host`, `CLI`, `OpenAPI`, `UI`)
 
 ## Workflow Automation
 
@@ -115,6 +117,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 ## Monitoring and Incident Response
 
 - [Keep](https://www.keephq.dev) - Alert management and AIOps platform. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [OpenStatus](https://www.openstatus.dev) - Uptime monitoring and status page platform with incident management. ([Source Code](https://github.com/openstatusHQ/openstatus)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Product Analytics
 
