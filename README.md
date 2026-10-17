@@ -25,6 +25,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Project and Work Management](#project-and-work-management)
 - [Scheduling](#scheduling)
 - [Data Platforms](#data-platforms)
+- [Software Development](#software-development)
 - [Communication Systems](#communication-systems)
 - [Secrets and Access Management](#secrets-and-access-management)
 - [Workflow Automation](#workflow-automation)
@@ -93,6 +94,10 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational layer that sits on top of the data integrated into Palantir Foundry. (`hosted`, `REST`, `CLI`, `UI`)
 - [Semantius](https://www.semantius.com) - Data platform on Postgres that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Superhuman Docs](https://superhuman.com/docs) - Workspace of docs with tables, formulas and buttons, formerly Coda. (`hosted`, `MCP`, `OpenAPI`, `UI`)
+
+## Software Development
+
+- [GitHub](https://github.com) - Developer platform for hosting code and building software together. (`hosted`, `MCP`, `CLI`, `OpenAPI`, `UI`)
 
 ## Communication Systems
 
