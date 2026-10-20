@@ -90,6 +90,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Baserow](https://baserow.io) - No-code database and application builder. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Busabase](https://busabase.com) - Database and workspace shared by agents and people, where every change keeps its history and important writes can wait for review. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
 - [Directus](https://directus.com) - Collaborative backend and headless CMS over any database, with a no-code interface. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
+- [ERP.AI](https://www.erp.ai) - Business app platform of tables, workflows and pages, with ready-made apps for finance, HR, CRM and operations. (`hosted`, `REST`, `UI`)
 - [NocoDB](https://nocodb.com) - No-code platform on top of a database, as an alternative to Airtable. ([Source Code](https://github.com/nocodb/nocodb)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational layer that sits on top of the data integrated into Palantir Foundry. (`hosted`, `REST`, `CLI`, `UI`)
 - [Semantius](https://www.semantius.com) - Data platform on Postgres that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
