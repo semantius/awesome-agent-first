@@ -20,7 +20,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Knowledge Bases](#knowledge-bases)
 - [Localization](#localization)
 - [Document Sharing](#document-sharing)
-- [Enterprise Resource Planning (ERP)](#enterprise-resource-planning-erp)
+- [Electronic Signatures](#electronic-signatures)
 - [Commerce](#commerce)
 - [Project and Work Management](#project-and-work-management)
 - [Scheduling](#scheduling)
@@ -37,7 +37,6 @@ Always-on agents gain the most from agent-first software, because they work whil
 ## Customer Relationship Management (CRM)
 
 - [ANOSF CRM](https://github.com/anosf/crm) - CRM whose REST API, MCP server and CLI share one service layer, with a reversible audit trail. (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
-- [Comp AI CRM](https://github.com/trycompai/crm) - CRM designed for AI agents. (`MIT`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Headless CRM](https://github.com/Cam-Smith-One/Headless_CRM) - MCP-native, API-first CRM built for AI agents. (`AGPL-3.0`, `self-host`, `MCP`, `REST`, `UI`)
 - [Planhat](https://www.planhat.com) - Customer platform for B2B commercial teams that brings customer data, collaboration and automation together across the customer lifecycle. (`hosted`, `REST`, `MCP`, `UI`)
 - [Twenty](https://twenty.com) - Modular CRM built as an open alternative to Salesforce. ([Source Code](https://github.com/twentyhq/twenty)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
@@ -51,25 +50,24 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Contentful](https://www.contentful.com) - API-first composable content platform. (`hosted`, `REST`, `MCP`, `UI`)
 - [Storyblok](https://www.storyblok.com) - Headless CMS with a visual editor. (`hosted`, `REST`, `MCP`, `UI`)
 - [Strapi](https://strapi.io) - Headless CMS written in JavaScript and TypeScript. ([Source Code](https://github.com/strapi/strapi)) (`MIT core`, `self-host`, `MCP`, `REST`, `UI`)
-- [Webiny](https://www.webiny.com) - Headless CMS that runs on AWS serverless services, with multi-tenancy. ([Source Code](https://github.com/webiny/webiny-js)) (`MIT core`, `self-host`, `GraphQL`, `UI`)
-
 ## Knowledge Bases
 
 - [AgentDocs](https://agentdocs.eu) - Collaborative Markdown documentation platform where AI agents are first-class users. (`hosted`, `MCP`, `REST`, `UI`)
 
 ## Localization
 
-- [Tolgee](https://tolgee.io) - Localization platform with in-app translation and collaborative tools. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Tolgee](https://tolgee.io) - Localization platform with in-app translation and collaborative tools. ([Source Code](https://github.com/tolgee/tolgee-platform)) (`Apache-2.0 core`, `self-host`, `MCP`, `CLI`, `UI`)
 
 ## Document Sharing
 
 - [Fastio](https://fast.io) - Project workspaces that hold the files for a team and its AI agents. (`hosted`, `MCP`, `REST`, `CLI`, `UI`)
 - [Papermark](https://www.papermark.com) - Data room and document sharing platform with page-level analytics and granular permissions. ([Source Code](https://github.com/mfts/papermark)) (`AGPL-3.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
-## Enterprise Resource Planning (ERP)
+## Electronic Signatures
 
-- [ERPNext](https://erpnext.com) - ERP for manufacturing, distribution, retail, trading, services and education. ([Source Code](https://github.com/frappe/erpnext)) (`GPL-3.0`, `self-host`, `hosted`, `REST`, `UI`)
-- [Odoo](https://www.odoo.com) - Suite of business applications spanning ERP, CRM, eCommerce and CMS. ([Source Code](https://github.com/odoo/odoo)) (`LGPL-3.0`, `self-host`, `RPC`, `UI`)
+- [Docusign](https://www.docusign.com) - Electronic signature and agreement management platform. (`hosted`, `MCP`, `OpenAPI`, `UI`)
+- [eSignatures.com](https://esignatures.com) - Mobile-first electronic signature platform whose contracts and templates are written in Markdown. (`hosted`, `MCP`, `REST`, `UI`)
+- [signNow](https://www.signnow.com) - Electronic signature platform for sending, signing and managing documents. (`hosted`, `MCP`, `REST`, `UI`)
 
 ## Commerce
 
@@ -82,7 +80,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 ## Scheduling
 
-- [Cal.com](https://cal.com) - Customizable scheduling software for online bookings. (`hosted`, `REST`, `OpenAPI`, `UI`)
+- [Cal.com](https://cal.com) - Customizable scheduling software for online bookings. (`hosted`, `MCP`, `REST`, `OpenAPI`, `UI`)
 
 ## Data Platforms
 
@@ -90,7 +88,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Baserow](https://baserow.io) - No-code database and application builder. ([Source Code](https://gitlab.com/baserow/baserow)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Busabase](https://busabase.com) - Database and workspace shared by agents and people, where every change keeps its history and important writes can wait for review. (`hosted`, `MCP`, `OpenAPI`, `CLI`, `UI`)
 - [Directus](https://directus.com) - Collaborative backend and headless CMS over any database, with a no-code interface. ([Source Code](https://github.com/directus/directus)) (`MSCL-1.0-GPL`, `self-host`, `MCP`, `REST`, `UI`)
-- [ERP.AI](https://www.erp.ai) - Business app platform of tables, workflows and pages, with ready-made apps for finance, HR, CRM and operations. (`hosted`, `REST`, `UI`)
+- [ERP.AI](https://www.erp.ai) - Business app platform of tables, workflows and pages, with ready-made apps for finance, HR, CRM and operations. (`hosted`, `Skills`, `REST`, `UI`)
 - [NocoDB](https://nocodb.com) - No-code platform on top of a database, as an alternative to Airtable. ([Source Code](https://github.com/nocodb/nocodb)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational layer that sits on top of the data integrated into Palantir Foundry. (`hosted`, `REST`, `CLI`, `UI`)
 - [Semantius](https://www.semantius.com) - Data platform on Postgres that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
@@ -104,25 +102,23 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 - [AgentMail](https://www.agentmail.to) - Email provider that gives AI agents real inboxes over an API. (`hosted`, `REST`, `MCP`, `IMAP`)
 - [AgenticMail](https://github.com/agenticmail/agenticmail) - Email, SMS and phone-call infrastructure for AI agents. (`MIT`, `self-host`, `MCP`, `IMAP`, `UI`)
-- [Chimely](https://github.com/dodopayments/chimely) - In-app notification inbox with an HTTP API and a drop-in React inbox component. (`AGPL-3.0`, `self-host`, `REST`, `OpenAPI`, `UI`)
 - [Hook0](https://www.hook0.com) - Webhooks as a service that handles delivery, retries and security for outgoing webhooks. ([Source Code](https://github.com/hook0/hook0)) (`SSPL-1.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [Novu](https://novu.co) - Notification infrastructure that reaches users in-app and over email, SMS, push and messaging apps through one API. ([Source Code](https://github.com/novuhq/novu)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Novu](https://novu.co) - Notification infrastructure that reaches users in-app and over email, SMS, push and messaging apps through one API. ([Source Code](https://github.com/novuhq/novu)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Secrets and Access Management
 
-- [authentik](https://goauthentik.io) - Identity provider and single sign-on platform. ([Source Code](https://github.com/goauthentik/authentik)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
-- [Infisical](https://infisical.com) - Identity security platform for managing identities, secrets, certificates and access. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Infisical](https://infisical.com) - Identity security platform for managing identities, secrets, certificates and access. ([Source Code](https://github.com/Infisical/infisical)) (`MIT core`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Keyorix](https://keyorix.com) - Secrets management server with versioned secrets, dynamic credentials and rotation. ([Source Code](https://github.com/keyorixhq/keyorix)) (`AGPL-3.0`, `self-host`, `CLI`, `OpenAPI`, `UI`)
 
 ## Workflow Automation
 
 - [Activepieces](https://www.activepieces.com) - Workspace combining AI chat, agents, automation flows and tables with app integrations. ([Source Code](https://github.com/activepieces/activepieces)) (`MIT core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [FlowFuse](https://flowfuse.com) - Industrial data platform for building, managing, scaling and securing Node-RED solutions. ([Source Code](https://github.com/FlowFuse/flowfuse)) (`Apache-2.0 core`, `self-host`, `MCP`, `OpenAPI`, `UI`)
-- [n8n](https://n8n.io) - Workflow automation platform that combines visual building with custom code and AI capabilities. ([Source Code](https://github.com/n8n-io/n8n)) (`Sustainable Use`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [n8n](https://n8n.io) - Workflow automation platform that combines visual building with custom code and AI capabilities. ([Source Code](https://github.com/n8n-io/n8n)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Monitoring and Incident Response
 
-- [Keep](https://www.keephq.dev) - Alert management and AIOps platform. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `REST`, `OpenAPI`, `UI`)
+- [Keep](https://www.keephq.dev) - Alert management and AIOps platform. ([Source Code](https://github.com/keephq/keep)) (`MIT core`, `self-host`, `CLI`, `OpenAPI`, `UI`)
 - [OpenStatus](https://www.openstatus.dev) - Uptime monitoring and status page platform with incident management. ([Source Code](https://github.com/openstatusHQ/openstatus)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
 ## Product Analytics
