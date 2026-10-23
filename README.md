@@ -26,6 +26,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [Scheduling](#scheduling)
 - [Data Platforms](#data-platforms)
 - [Software Development](#software-development)
+- [Edge and Content Delivery](#edge-and-content-delivery)
 - [Communication Systems](#communication-systems)
 - [Secrets and Access Management](#secrets-and-access-management)
 - [Workflow Automation](#workflow-automation)
@@ -97,6 +98,10 @@ Always-on agents gain the most from agent-first software, because they work whil
 ## Software Development
 
 - [GitHub](https://github.com) - Developer platform for hosting code and building software together. (`hosted`, `MCP`, `CLI`, `OpenAPI`, `UI`)
+
+<!-- ## Edge and Content Delivery -->
+
+- [Fastly](https://www.fastly.com) - Edge cloud platform for content delivery, security and compute. (`hosted`, `MCP`, `CLI`, `REST`, `UI`)
 
 ## Communication Systems
 
