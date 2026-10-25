@@ -99,7 +99,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 - [GitHub](https://github.com) - Developer platform for hosting code and building software together. (`hosted`, `MCP`, `CLI`, `OpenAPI`, `UI`)
 
-<!-- ## Edge and Content Delivery -->
+## Edge and Content Delivery
 
 - [Fastly](https://www.fastly.com) - Edge cloud platform for content delivery, security and compute. (`hosted`, `MCP`, `CLI`, `REST`, `UI`)
 
