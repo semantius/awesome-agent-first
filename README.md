@@ -16,6 +16,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 - [Customer Relationship Management (CRM)](#customer-relationship-management-crm)
 - [Customer Support](#customer-support)
+- [Recruiting](#recruiting)
 - [Content Management](#content-management)
 - [Knowledge Bases](#knowledge-bases)
 - [Localization](#localization)
@@ -45,6 +46,10 @@ Always-on agents gain the most from agent-first software, because they work whil
 ## Customer Support
 
 - [Plain](https://www.plain.com) - Support platform for B2B teams that brings email, Slack, Microsoft Teams, chat, Discord and contact forms into one queue. (`hosted`, `GraphQL`, `MCP`, `UI`)
+
+## Recruiting
+
+- [Lovelio](https://lovelio.ai) - Recruitment software for agencies that combines applicant tracking, CRM, sourcing, screening calls and business development. (`hosted`, `MCP`, `OpenAPI`, `UI`)
 
 ## Content Management
 
@@ -92,7 +97,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 - [ERP.AI](https://www.erp.ai) - Business app platform of tables, workflows and pages, with ready-made apps for finance, HR, CRM and operations. (`hosted`, `Skills`, `REST`, `UI`)
 - [NocoDB](https://nocodb.com) - No-code platform on top of a database, as an alternative to Airtable. ([Source Code](https://github.com/nocodb/nocodb)) (`Sustainable Use`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 - [Palantir Foundry Ontology](https://www.palantir.com/docs/foundry/ontology/overview) - Operational layer that sits on top of the data integrated into Palantir Foundry. (`hosted`, `REST`, `CLI`, `UI`)
-- [Semantius](https://www.semantius.com) - Data platform on Postgres that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
+- [Semantius](https://www.semantius.com) - Data platform on PostgreSQL that enforces business rules, approvals and permissions for every person, app and agent. ([Source Code](https://github.com/semantius/semantius)) (`MIT`, `self-host`, `MCP`, `CLI`, `UI`)
 - [Superhuman Docs](https://superhuman.com/docs) - Workspace of docs with tables, formulas and buttons, formerly Coda. (`hosted`, `MCP`, `OpenAPI`, `UI`)
 
 ## Software Development
