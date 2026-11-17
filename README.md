@@ -133,7 +133,7 @@ Always-on agents gain the most from agent-first software, because they work whil
 
 ## Product Analytics
 
-- [Databuddy](https://www.databuddy.cc) - Cookieless product analytics for visitors, events, funnels and goals. ([Source Code](https://github.com/databuddy-analytics/Databuddy)) (`AGPL-3.0`, `self-host`, `MCP`, `OpenAPI`, `UI`)
+- [Databuddy](https://www.databuddy.cc) - Cookieless product analytics for visitors, events, funnels and goals. (`hosted`, `MCP`, `OpenAPI`, `UI`)
 - [PostHog](https://posthog.com) - Developer platform for analytics, session replay, feature flags, experiments, error tracking, logs and AI observability. ([Source Code](https://github.com/PostHog/posthog)) (`MIT core`, `hosted`, `MCP`, `OpenAPI`, `UI`)
 - [Umami](https://umami.is) - Web and product analytics without cookies. ([Source Code](https://github.com/umami-software/umami)) (`MIT`, `self-host`, `MCP`, `OpenAPI`, `UI`)
 
